@@ -20,8 +20,6 @@
 import axios from 'axios';
 import { Toast } from 'mint-ui';
 
-const BASE_URL = 'http://115.28.180.202:3000/';
-
 export default {
   name: 'login',
   data() {
@@ -32,7 +30,7 @@ export default {
   },
   methods: {
     login() {
-      axios.post(`${BASE_URL}user/login`, {
+      axios.post(`${process.env.BASE_URL}/user/login`, {
         username: this.username,
         password: this.password,
       }).then((response) => {
