@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import Hello from '@/components/Hello';
 import Login from '../components/Login';
 import Register from '../components/Register';
+import Index from '../components/Index';
 
 Vue.use(Router);
 
@@ -20,6 +21,10 @@ export default new Router({
       path: '/register',
       name: 'Register',
       component: Register,
+    }, {
+      path: '/index',
+      name: 'Index',
+      component: Index,
     },
   ],
 });

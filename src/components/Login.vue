@@ -42,7 +42,7 @@ export default {
             });
             setTimeout(() => {
               this.$router.push({
-                name: 'Hello',
+                name: 'Index',
               });
             }, 1500);
           } else {
@@ -54,7 +54,7 @@ export default {
         }
       }).catch((err) => {
         Toast({
-          message: err,
+          message: err.message,
           duration: 1500,
         });
       });
@@ -70,10 +70,6 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-a {
-  color: #42b983;
-}
-
 .form-button {
   margin-top: 20px;
 }
